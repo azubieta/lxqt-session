@@ -1,0 +1,12 @@
+[Desktop Entry]
+OnlyShowIn=LXDE-Qt;
+Type=Application
+Exec=lxqt-config-session
+Terminal=false
+Categories=Settings;DesktopSettings;Qt;Razor;
+Icon=preferences-system-session-services
+Name=LXDE-Qt Session Configurator
+Comment=Configure LXDE-Qt session module
+GenericName=LXDE-Qt Session Configurator
+
+#TRANSLATIONS_DIR=translations
