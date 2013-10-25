@@ -52,10 +52,10 @@ razor_translate_ts(razor-runner_QM_FILES
 QT4_WRAP_CPP(MOCS ${razor-session_MOCS})
 qt4_wrap_ui(UIS ${razor-session_UI})
 
-add_executable ( lxqt-session ${razor-session_SRCS} ${UIS} ${RSCS} ${razor-runner_QM_FILES} ${MOCS} )
-add_dependencies( lxqt-session lxqt qtxdg)
-target_link_libraries ( lxqt-session  ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTDBUS_LIBRARY} lxqt qtxdg)
-INSTALL(TARGETS lxqt-session RUNTIME DESTINATION bin)
+add_executable ( lxsession ${razor-session_SRCS} ${UIS} ${RSCS} ${razor-runner_QM_FILES} ${MOCS} )
+add_dependencies( lxsession lxqt qtxdg)
+target_link_libraries ( lxsession  ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTDBUS_LIBRARY} lxqt qtxdg)
+INSTALL(TARGETS lxsession RUNTIME DESTINATION bin)
 
 if (NOT DEFINED BUNDLE_XDG_UTILS)
     message(STATUS "*********************************************************************")
@@ -71,4 +71,3 @@ if (BUNDLE_XDG_UTILS)
 endif (BUNDLE_XDG_UTILS)
 
 #install(PROGRAMS src/startlxde-qt DESTINATION bin)
-
